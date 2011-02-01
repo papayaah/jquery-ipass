@@ -10,7 +10,7 @@ h2. Known issues
 
 h2. Screenshot of the demo
 
-!http://img843.imageshack.us/img843/903/jqueryhintdemo.png!
+!!
 
 h2. To use:
 
