@@ -1,0 +1,61 @@
+<html>
+<head>
+  <title>jQuery iPass Plugine</title>
+  <style>
+    div#container {
+      width: 950px;
+      margin: 0 auto;
+      font-size: 18px;
+      margin-top: 50px;      
+    }
+    input {
+      font-size: 18px;
+      padding: 5px;
+    }
+    input#demo2 {
+      color: blue;
+    }
+    pre#code {
+      display:none;
+    }
+  </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>  
+  <script type="text/javascript" src="jquery.ipass-1.1.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $("form").submit(function(){
+        var params = $(this).serialize();
+        $("div#msg").html("Form serialized parameters: " + params);
+        return false;
+      });
+      $("div#demo1 input[name='password']").iPass();
+    })
+  </script>
+
+</head>
+<body>    
+  <div id="container">
+    <h1>jQuery iPass Plugin Demo</h1>
+    
+    <div id="msg"></div>
+    
+    <div id="demo1">      
+      <h3>Demo 1</h3>
+      <p>Enter your password:</p>
+      <form>
+      <input type="text" title="Enter your password" name="password" />
+      <button type="submit">Submit</button>
+      </form>
+      <code>
+          $("div#demo1 input[name='password']").iPass();
+      </code>
+    </div>
+    
+  <pre id="code">
+    
+  </pre>
+  </div>
+  
+</body>
+</html>
+  

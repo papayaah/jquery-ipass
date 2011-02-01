@@ -2,15 +2,14 @@ h1. jQuery iPass
 
 Originally written by Oliver Storm, Stefan Huissel( http://www.mysrc.de ) to provide iPhone like password input.
 
-Improved on it a little bit by adding a few features:
+Improved on it a little bit by adding a few options:
 
-
-h2. Known issues
-* resetCursorPos does not work on IE- at least on IE 8. If someone can fix that and send a patch please do. Search for createTextRange on the source. No worries the current version does not create any JS error on the browser.
+* color, fontStyle : set the hint's text to this color and style
+* retain : whether to clear the field on focus or on keydown
 
 h2. Screenshot of the demo
 
-!!
+!http://img715.imageshack.us/img715/7453/ipassdemo.png!
 
 h2. To use:
 
@@ -18,20 +17,19 @@ h2. To use:
 <script type="text/javascript" src="jquery.ipass-1.1.js"></script>
 </pre>
 
-And modify all input text fields with title attribute
+And execute the code:
 
 <pre>
-  $("input[title!='']").hint();
+    $("div#demo1 input[name='password']").iPass();
 </pre>
 
 h2. The following are the possible options:
 
-color - color of the hint text (defaults to "gray")
-fontStyle - font style of the hint text (defaults to "italic")
-blurClass - class name to apply when the input text field hint is showing up (defaults to "blur")
+* color, fontStyle -  set the hint's text to this color and style
+* retain : whether to clear the field on focus or on keydown
 
 Eg,
 
 <pre>
-    $("input[title!='']").hint({ color: 'blue', fontStyle: 'normal'});
+    $("div#demo1 input[name='password']").iPass({ retain : false, color : "blue"});
 </pre>
